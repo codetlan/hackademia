@@ -1,0 +1,23 @@
+.overlay {
+  .background-image(linear-gradient(top, rgba(232, 234, 241,.97), rgba(243,243,244, .97) 100%));
+  .position(absolute, 0, 0, 0, 0);
+  z-index: 1;
+
+  .overlay-back,
+  .overlay-dismiss {
+    .position(absolute, 0, auto, auto, auto, 3em, 3em);
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: @color-medium-well;
+      font-size: 1em;
+      line-height: 48px;
+    }
+  }
+
+  .overlay-back { left: 0; }
+  .overlay-dismiss { right:0; }
+}

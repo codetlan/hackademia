@@ -1,0 +1,19 @@
+<template name="header">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Expertus</a>
+            <ul id="nav-mobile" class="right side-nav">
+        {{#if isAdmin}}
+                <li><a>Usuarios</a></li>
+                <li><a>Cursos</a></li>
+                <li><a class="logout">Salir</a></li>
+        {{else}}
+            {{#unless currentUser}}
+                <li><a class="login-options">Ingresar</a></li>
+            {{/unless}}
+        {{/if}}
+            </ul>
+            <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </nav>
+</template>
