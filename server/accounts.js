@@ -9,7 +9,6 @@ Accounts.onCreateUser(function (options, user) {
 
         if (admins.indexOf(user.profile.email) !== -1) {
             user.profile.admin = true;
-            user.admin = true;
         }
     }
     return user;
